@@ -106,7 +106,8 @@ public class Bot extends ListenerAdapter {
 		Log.info("Starting JDA...");
 
 		try {
-			JDABuilder builder = new JDABuilder(AccountType.BOT);
+			//JDABuilder builder = new JDABuilder(AccountType.BOT);
+            JDABuilder builder = JDABuilder.createDefault("BOT");
 			builder.setToken(Config.get(Config.BOT_TOKEN));
 
 			if(Config.getBoolean(Config.AUTO_RECONNECT)) {
